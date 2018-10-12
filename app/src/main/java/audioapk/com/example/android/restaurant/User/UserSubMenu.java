@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import audioapk.com.example.android.restaurant.MainActivity;
 import audioapk.com.example.android.restaurant.R;
 
 public class UserSubMenu extends AppCompatActivity {
@@ -31,9 +32,6 @@ public class UserSubMenu extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.sub_menu_recycler);
         recyclerView.setAdapter(new MenuListAdaptor(this, bundle.getStringArrayList("items")));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-
-
 
 
     }
@@ -61,7 +59,6 @@ public class UserSubMenu extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull MenuHolder holder, int position) {
-            Log.i("Ketan",items.toString());
 
             holder.bind(items.get(position),items.get((items.size()/2) + position));
         }
@@ -97,7 +94,9 @@ public class UserSubMenu extends AppCompatActivity {
 
             menuText.setText(menu);
             menuPrice.setText(price);
-            System.out.println(price);
+            if (MainActivity.cart.contains(menu)){
+                checkBox.setChecked(true);
+            }
 
         }
 
@@ -105,9 +104,24 @@ public class UserSubMenu extends AppCompatActivity {
         public void onClick(View v) {
             if (checkBox.isChecked()){
                 checkBox.setChecked(false);
+                int itemIndex = MainActivity.cart.indexOf(menuText.getText().toString());
+                MainActivity.total -= Integer.valueOf(MainActivity.cart.get(itemIndex+1));
+                MainActivity.cart.remove(itemIndex);
+                MainActivity.cart.remove(itemIndex);
+
+
             }else {
                 checkBox.setChecked(true);
+
+                Log.i("Ketan2",String.valueOf(MainActivity.cart));
+                MainActivity.cart.add(menuText.getText().toString());
+                MainActivity.cart.add(menuPrice.getText().toString());
+                MainActivity.total += Integer.valueOf(menuPrice.getText().toString());
+
+                Log.i("Ketan2",String.valueOf(MainActivity.cart));
             }
         }
     }
+
+
 }

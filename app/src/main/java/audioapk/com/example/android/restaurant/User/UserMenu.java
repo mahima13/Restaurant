@@ -1,21 +1,33 @@
 package audioapk.com.example.android.restaurant.User;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import audioapk.com.example.android.restaurant.MainActivity;
 import audioapk.com.example.android.restaurant.R;
 
-public class UserMenu extends AppCompatActivity {
+public class UserMenu extends AppCompatActivity implements View.OnClickListener {
 
+
+    TextView cartItemText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_menu);
+        cartItemText = findViewById(R.id.cart_items);
+        cartItemText.setOnClickListener(this);
+
+
+
     }
 
     public void clicked(View view) {
@@ -47,6 +59,53 @@ public class UserMenu extends AppCompatActivity {
         intent.putExtra("items", new ArrayList<>(Arrays.asList(getResources().getStringArray(idToArray))));
         startActivity(intent);
 
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+        StringBuilder cartString = new StringBuilder();
+        for (int i = 0; i < MainActivity.cart.size()-1; i+=2) {
+            cartString.append(MainActivity.cart.get(i)).append("\t").append(MainActivity.cart.get(i + 1)).append("\n");
+        }
+        cartString.append("\n").append("Total is ").append(MainActivity.total).append(" Click Here To Checkout");
+
+        cartItemText.setText(cartString);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (MainActivity.total <= 0){
+            Toast.makeText(this,"No Item selected",Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Checkout").setMessage("Are you sure you want to checkout this items?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        checkout();
+                    }
+                }).setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).setIcon(R.drawable.ic_shopping_cart).show();
+
+
+
+    }
+
+    private void checkout() {
+        Toast.makeText(this,"Checkout Successful Please wait For your order",Toast.LENGTH_LONG).show();
+
+        //Store To fireBase;
+
+        MainActivity.cart.clear();
+        MainActivity.total = 0;
+        finish();
     }
 }
