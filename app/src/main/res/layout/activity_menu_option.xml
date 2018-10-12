@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu_option">
+
+    <Button
+        android:id="@+id/pizza"
+        android:layout_width="111dp"
+        android:layout_height="112dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="230dp"
+        android:text="Pizza" />
+
+    <Button
+        android:id="@+id/veg"
+        android:layout_width="116dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="196dp"
+        android:text="Veg" />
+
+    <Button
+        android:id="@+id/nonveg"
+        android:layout_width="116dp"
+        android:layout_height="120dp"
+        android:layout_alignTop="@+id/veg"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-17dp"
+        android:layout_marginEnd="77dp"
+        android:text="Non Veg" />
+
+    <Button
+        android:id="@+id/drink"
+        android:layout_width="116dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="197dp"
+        android:layout_marginBottom="349dp"
+        android:text="Drink" />
+
+    <Button
+        android:id="@+id/dessert"
+        android:layout_width="109dp"
+        android:layout_height="107dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="51dp"
+        android:text="Dessert" />
+
+</RelativeLayout>

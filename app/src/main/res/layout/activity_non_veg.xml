@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NonVeg">
+
+
+    <CheckBox
+        android:id="@+id/n1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="24dp"
+        android:onClick="selectItem"
+        android:text="Butter Chicken (Rs.160)" />
+
+    <CheckBox
+        android:id="@+id/n2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="selectItem"
+        android:text="Steamed Rice (Rs.60)" />
+
+    <CheckBox
+        android:id="@+id/n3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/final_result"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="-17dp"
+        android:onClick="selectItem"
+        android:text="Butter Naan (Rs.25)" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="236dp"
+        android:onClick="finalSelection"
+        android:text="Done" />
+
+    <TextView
+        android:id="@+id/final_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-111dp"
+        android:layout_marginBottom="83dp"
+        android:layout_toStartOf="@+id/button4"
+        android:text="Selected Item" />
+
+    <CheckBox
+        android:id="@+id/n4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="22dp"
+        android:onClick="selectItem"
+        android:text="Chicken Chettinad (Rs.180)" />
+
+    <CheckBox
+        android:id="@+id/n5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="55dp"
+        android:onClick="selectItem"
+        android:text="Prawns Koliwada (Rs.170)" />
+
+    <CheckBox
+        android:id="@+id/n6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="138dp"
+        android:onClick="selectItem"
+        android:text="Roti (Rs.20)" />
+
+    <CheckBox
+        android:id="@+id/n7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="96dp"
+        android:onClick="selectItem"
+        android:text="Chicken Biriyani (Rs.280)" />
+
+    <CheckBox
+        android:id="@+id/n8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="102dp"
+        android:onClick="selectItem"
+        android:text="Mutton Biriyani (Rs.300)" />
+
+</RelativeLayout>

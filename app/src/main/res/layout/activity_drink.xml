@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Drink">
+
+
+    <CheckBox
+        android:id="@+id/e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="24dp"
+        android:onClick="selectItem"
+        android:text="Pina Colada (Rs.70)" />
+
+    <CheckBox
+        android:id="@+id/e2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="selectItem"
+        android:text="Lassi (Rs.60)" />
+
+    <CheckBox
+        android:id="@+id/e3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/final_result"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="9dp"
+        android:onClick="selectItem"
+        android:text="Irish Coffee (Rs.70)" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="236dp"
+        android:onClick="finalSelection"
+        android:text="Done" />
+
+    <TextView
+        android:id="@+id/final_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-111dp"
+        android:layout_marginBottom="83dp"
+        android:layout_toStartOf="@+id/button4"
+        android:text="Selected Item" />
+
+    <CheckBox
+        android:id="@+id/e4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="22dp"
+        android:onClick="selectItem"
+        android:text="Ginger Tea(Rs.50)" />
+
+    <CheckBox
+        android:id="@+id/e5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="55dp"
+        android:onClick="selectItem"
+        android:text="Masala Tea (Rs.70)" />
+
+    <CheckBox
+        android:id="@+id/e6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="206dp"
+        android:layout_marginTop="138dp"
+        android:onClick="selectItem"
+        android:text="Aam Panna (Rs.20)" />
+
+    <CheckBox
+        android:id="@+id/e7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="96dp"
+        android:onClick="selectItem"
+        android:text="Mojito (Rs.140)" />
+
+    <CheckBox
+        android:id="@+id/e8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="102dp"
+        android:onClick="selectItem"
+        android:text="Lemonade (Rs.20)" />
+
+</RelativeLayout>
