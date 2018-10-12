@@ -9,11 +9,11 @@
     <Button
         android:id="@+id/dessert_button"
         android:layout_width="180dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/dessert"
         android:onClick="clicked"
+        android:text="@string/dessert"
         app:layout_constraintEnd_toStartOf="@+id/drink_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/drink_button"
         android:layout_width="180dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="clicked"
@@ -35,7 +35,7 @@
     <Button
         android:id="@+id/non_veg_button"
         android:layout_width="180dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="clicked"
@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/veg_button"
         android:layout_width="180dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="clicked"
@@ -61,7 +61,7 @@
     <Button
         android:id="@+id/pizza_button"
         android:layout_width="180dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -75,14 +75,28 @@
         android:id="@+id/cart_items"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pizza_button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="6dp"
+        android:onClick="checkout"
+        android:text="Checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

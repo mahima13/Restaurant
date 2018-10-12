@@ -9,14 +9,19 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import audioapk.com.example.android.restaurant.MainActivity;
 import audioapk.com.example.android.restaurant.R;
 
-public class UserMenu extends AppCompatActivity implements View.OnClickListener {
+public class UserMenu extends AppCompatActivity{
 
+
+    DatabaseReference myRef;
 
     TextView cartItemText;
     @Override
@@ -24,7 +29,16 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_menu);
         cartItemText = findViewById(R.id.cart_items);
-        cartItemText.setOnClickListener(this);
+
+//        TODO
+//        myRef = FirebaseDatabase.getInstance().getReference("message");
+//        myRef.setValue("Hello, World!");
+
+//        myRef = FirebaseDatabase.getInstance().getReference();
+//        DatabaseReference child = myRef.child("name");
+//        child.setValue("Ketan");
+
+        myRef = FirebaseDatabase.getInstance().getReference("orders");
 
 
 
@@ -70,14 +84,27 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
         for (int i = 0; i < MainActivity.cart.size()-1; i+=2) {
             cartString.append(MainActivity.cart.get(i)).append("\t").append(MainActivity.cart.get(i + 1)).append("\n");
         }
-        cartString.append("\n").append("Total is ").append(MainActivity.total).append(" Click Here To Checkout");
+        cartString.append("\n").append("Total is ").append(MainActivity.total);
 
         cartItemText.setText(cartString);
 
     }
 
-    @Override
-    public void onClick(View v) {
+
+    private void checkout() {
+
+        //Write to database
+        myRef.push().setValue(cartItemText.getText().toString());
+
+        Toast.makeText(this,"Checkout Successful Please wait For your order",Toast.LENGTH_LONG).show();
+
+
+        MainActivity.cart.clear();
+        MainActivity.total = 0;
+        finish();
+    }
+
+    public void checkout(View view) {
         if (MainActivity.total <= 0){
             Toast.makeText(this,"No Item selected",Toast.LENGTH_LONG).show();
             return;
@@ -90,22 +117,10 @@ public class UserMenu extends AppCompatActivity implements View.OnClickListener 
                         checkout();
                     }
                 }).setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).setIcon(R.drawable.ic_shopping_cart).show();
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        }).setIcon(R.drawable.ic_shopping_cart).show();
 
-
-
-    }
-
-    private void checkout() {
-        Toast.makeText(this,"Checkout Successful Please wait For your order",Toast.LENGTH_LONG).show();
-
-        //Store To fireBase;
-
-        MainActivity.cart.clear();
-        MainActivity.total = 0;
-        finish();
     }
 }

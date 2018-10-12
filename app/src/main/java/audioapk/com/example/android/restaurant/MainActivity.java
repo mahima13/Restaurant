@@ -29,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chefClicked(View view) {
+
+        Intent intent = new Intent(this,Chef.class);
+        startActivity(intent);
+
     }
 
-    public void CounterClicked(View view) {
-    }
+
 }
