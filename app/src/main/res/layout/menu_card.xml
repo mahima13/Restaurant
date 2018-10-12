@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:id="@+id/card_checkBox"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:paddingTop="0dp" />
+
+    <TextView
+        android:id="@+id/card_menu_name"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:textSize="24sp"
+        android:layout_weight="6"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/card_menu_price"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_weight="4"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>

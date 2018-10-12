@@ -1,3 +1,112 @@
 <resources>
     <string name="app_name">Restaurant</string>
+    <string-array name="dessert">
+        <item>Rasmalai</item>
+        <item>Gulab Jamun</item>
+        <item>Panacota</item>
+        <item>Chocolate Cake</item>
+        <item>Icecream Sundae</item>
+        <item>Pherni</item>
+        <item>Brownie Sizzler</item>
+        <item>Shahi Tukda</item>
+        <item>200</item>
+        <item>150</item>
+        <item>150</item>
+        <item>200</item>
+        <item>150</item>
+        <item>140</item>
+        <item>250</item>
+        <item>130</item>
+
+    </string-array>
+
+    <string-array name="Drink">
+        <item>Pina Colada</item>
+        <item>Lassi</item>
+        <item>Irish Coffee</item>
+        <item>Ginger Tea</item>
+        <item>Masala Tea</item>
+        <item>Aam Panna</item>
+        <item>Mojito</item>
+        <item>Lemonade</item>
+        <item>70</item>
+        <item>60</item>
+        <item>70</item>
+        <item>35</item>
+        <item>70</item>
+        <item>20</item>
+        <item>140</item>
+        <item>20</item>
+
+    </string-array>
+
+    <string-array name="NonVeg">
+        <item>Butter Chicken</item>
+        <item>Steamed Rice</item>
+        <item>Butter naan</item>
+        <item>Chicken chettinad</item>
+        <item>Prawns Koliwada</item>
+        <item>Roti</item>
+        <item>Chicken Biriyani</item>
+        <item>Mutton Biriyani</item>
+        <item>160</item>
+        <item>60</item>
+        <item>25</item>
+        <item>180</item>
+        <item>170</item>
+        <item>20</item>
+        <item>200</item>
+        <item>300</item>
+
+    </string-array>
+
+
+    <string-array name="Veg">
+        <item>Dal Tadka</item>
+        <item>Jeera Rice</item>
+        <item>Butter naan</item>
+        <item>Shahi Paneer</item>
+        <item>VEG. Kolhapuri</item>
+        <item>Roti</item>
+        <item>Pulav</item>
+        <item>Paneer Platter</item>
+        <item>60</item>
+        <item>120</item>
+        <item>25</item>
+        <item>60</item>
+        <item>170</item>
+        <item>20</item>
+        <item>100</item>
+        <item>300</item>
+
+    </string-array>
+
+    <string-array name="Pizza">
+        <item>Fresh Veggie</item>
+        <item>Chicken</item>
+        <item>Cheese Burst</item>
+        <item>Margerita</item>
+        <item>Sweet Corn</item>
+        <item>Onion</item>
+        <item>Deluxe</item>
+        <item>Peppy Paneer</item>
+        <item>40</item>
+        <item>120</item>
+        <item>150</item>
+        <item>100</item>
+        <item>130</item>
+        <item>79</item>
+        <item>250</item>
+        <item>180</item>
+
+
+    </string-array>
+
+    <string name="dessert">Dessert</string>
+    <string name="Drink">Drink</string>
+    <string name="NonVeg">NonVeg</string>
+    <string name="Veg">Veg</string>
+    <string name="Pizza">Pizza</string>
+
+
 </resources>
